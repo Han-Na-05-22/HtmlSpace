@@ -86,11 +86,11 @@ body{
                     margin-bottom: 4%;
                     transition: 1s;
                     border:0.5px solid #fff;
-
+        
                     &:hover{
                         background: rgba(255,255,255,0.2);
                         transform: scale(1.05);
-
+                        
                         img{opacity: 1;}
 
                         h3{
@@ -348,35 +348,51 @@ body{
                         height: 23%;
                         background: rgba(255,255,255,0.1);
                         border:0.5px solid #fff;
-                        padding:30px;
+                        padding:30px 15px;
                         transition: 1s;
                         margin-bottom: 3.77%;
                   
                         &:hover{
                             background: rgba(255,255,255,0.2);
                             transform: scale(1.05);
+
+                            span{
+                                color:#eee;
+
+                                b{color:#eee;}
+                            }
+
+                            ol li{color:#fff}
                         }
 
                         a{
                             width: 100%;
                             height: 100%;
                             display: flex;
-                            justify-content: space-evenly;
+                            justify-content: space-between;
                             align-items: center;
 
                             img{
                                 width: 25%;
-                                height: 50%;
+                                height: 100%;
                                 object-fit: cover;
                             }
 
                             span{
+                                font:bold 13px/1 'Orbitron';
+                                color:#ddd;
+                                display: block;
+                                line-height: 13px;
 
+                                b{
+                                    font:bold 11px/1 'Orbitron';
+                                    color:#ddd;
+                                    margin-top: 10px;
+                                    display: block;
+                                }
                             }
 
-                            b{
 
-                            }
 
                             ol{
                                 display: flex;
@@ -384,7 +400,16 @@ body{
                                 align-items: center;
 
                                 >li{
+                                    margin-right: 15px;
+                                    
+                                    i{
+                                        font-size: 20px;
+                                        color:#eee;
 
+                                        &:nth-child(3){
+                                            margin-right: 0px;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -402,19 +427,49 @@ body{
                     display: block;
                     width: 100%;
                     height: 100%;
-
+                    padding:50px 30px 75px;
+                    
                     &:hover{
                         background: rgba(255,255,255,0.2);
                         transform: scale(1.05);
+
+                        h3{
+                            text-shadow: 1px 1px 1px rgba(255,255,255,.9);
+                            color:#fff;
+                        }
+
+                        .board{
+                            li{
+                              text-shadow: 1px 1px 1px rgba(255,255,255,.9);
+                               color:#eee;
+                            }
+                        }
                     }
 
                     h3{
-
+                        font:bold 30px/1 'Orbitron';
+                        color:#eee;
+                        margin-bottom: 30px;
                     }
 
                     .board{
-                        li{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
 
+                        li{
+                            margin-bottom: 20px;
+                            padding:35px;
+                            font:bold 13px/20px 'Orbitron';
+                            color:#ddd;
+                            border:1px solid #fff;
+                            transition: 1s;
+
+                            &:hover{
+                                background: rgba(255,255,255,.35);
+                            }
                         }
                     }
                 }
@@ -645,33 +700,99 @@ body{
                         transition: 1s;
                         display: block;
                         width: 47.5%;
-                        height: 48%;
                         float: left;
 
-                        &:hover{
-                            background: rgba(255,255,255,0.2);
-                            transform: scale(1.05);
+                        div{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+
+                            i{
+                                transition: 1s;
+                                font-size:125px;
+                                color:#fff;
+                            }
                         }
 
-                        &:nth-child(1){
+                        &:nth-of-type(1){
                             width: 100%;
                             margin-bottom:5.5%;
+                            height: 61%;
 
-                            .data{
+                            .weather{
+                                width: 100%;
+                                height: 100%;
+                                justify-content: space-evenly;
+                                padding:30px;
 
+                                i{font-size:150px;}
+
+                                span{
+                                    font:bold 50px/1 'Orbitron';
+                                    color:#eee;
+                                }
+
+                                strong{
+                                    font:bold 35px/1 'Orbitron';
+                                    color:#eee;
+                                }
                             }
+
                         }
 
                         &:nth-child(2){
                             margin-right: 5%;
+                            height: 35%;
+
+                            .date{
+                                width: 100%;
+                                height: 100%;
+                                padding:30px;
+
+                                h3{
+                                    font:bold 35px/1 'Orbitron';
+                                    color:#eee;
+                                    margin-top: 30px;
+                                }
+                            }
                         }
 
-                        .wearter{
+                        &:nth-of-type(3){
+                            height: 35%;
 
+                            .temperature{
+                                width: 100%;
+                                height: 100%;
+                                padding:30px;
+                                flex-direction: row;
+                                
+                                span{
+                                    font:bold 35px/1 'Orbitron';
+                                    color:#eee;
+                                    display: block;
+                                    padding-top: 75px;
+                                }
+                            }
                         }
 
-                        .temperature{
 
+                        &:hover{
+                            background: rgba(255,255,255,0.2);
+                            transform: scale(1.05);
+
+                            >div{
+
+                                >i{
+                                    text-shadow: 3px 3px 10px rgba(68, 255, 224, 0.515);
+                                    transform: translateY(-15px);
+                                }
+
+                                span,strong{
+                                    color:#fff;
+                                    text-shadow: 1px 1px 1px rgba(255,255,255,.9);
+                                }
+                            }
                         }
                     }
                 }
